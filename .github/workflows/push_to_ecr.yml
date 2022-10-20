@@ -34,7 +34,7 @@ jobs:
       run: |
         cd chapter02/kubia/
         ls -ltra
-        # build docker image
+        # build docker image1
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         # Unit test
         docker run -d -p 80:8080 --name nodeapp $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
